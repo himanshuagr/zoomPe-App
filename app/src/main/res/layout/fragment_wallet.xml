@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:id="@+id/mylayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/layout_round"
+
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/walletbalance"
+          android:text="Your Wallet Balance"
+          android:textColor="@color/white"
+          android:textSize="30sp"
+          android:layout_marginTop="20dp"
+          android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 500 "
+            android:textColor="@color/white"
+            android:layout_below="@id/walletbalance"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addmoney"
+        android:text="Add Money"
+        android:textColor="@color/black"
+        android:layout_below="@+id/mylayout"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextNumberSigned"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addmoney"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:textSize="30sp"
+        android:hint="₹  Amount"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNumberSigned"
+        android:text="Your Money Will be added to wallet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/proceed"
+        android:background="@drawable/layout_round"
+        android:text="Proceed"
+        android:textColor="@color/white"
+        android:layout_below="@+id/editTextNumberSigned"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@android:color/holo_blue_light"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/proceed"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
+        app:srcCompat="@drawable/ic_baseline_qr_code_scanner_24"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/proceed"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="120dp"
+        app:srcCompat="@drawable/ic_baseline_send_24"
+        android:layout_alignParentLeft="true"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_below="@id/proceed"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="30dp"
+        android:text="Use Your Wallet to" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/proceed"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="160dp"
+        app:srcCompat="@drawable/ic_baseline_history_24"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/proceed"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="80dp"
+        android:textSize="18sp"
+        android:text="Make a Payment" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/proceed"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="80dp"
+        android:textSize="18sp"
+        android:text="Withdraw Money to Bank Account" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/proceed"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="80dp"
+        android:textSize="18sp"
+        android:text="Transaction History" />
+
+
+</RelativeLayout>
