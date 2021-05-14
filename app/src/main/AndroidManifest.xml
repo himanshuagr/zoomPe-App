@@ -3,12 +3,15 @@
     package="com.example.zoompe">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
 
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
@@ -17,7 +20,10 @@
         android:icon="@drawable/logo2"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Zoompe">
+        android:theme="@style/Theme.Zoompe"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".nfc"></activity>
+        <activity android:name=".paymentPage" />
         <activity android:name=".home" />
         <activity android:name=".register" />
         <activity android:name=".register_otp" />

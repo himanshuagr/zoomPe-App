@@ -47,7 +47,7 @@ public class register_mobile extends AppCompatActivity {
                     Toast.makeText(register_mobile.this, "Enter Valid number", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                String url="http://3.17.63.250:3000/user/registerUserByMobile/";
+                String url="http://18.221.112.221:3000/user/registerUserByMobile/";
                 AsyncHttpClient client = new AsyncHttpClient();
                 RequestParams params = new RequestParams();
                 params.put("mobile",num);

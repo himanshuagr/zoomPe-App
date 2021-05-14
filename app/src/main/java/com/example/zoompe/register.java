@@ -67,7 +67,7 @@ public class register extends AppCompatActivity {
                      Toast.makeText(register.this, "Fill all the details", Toast.LENGTH_SHORT).show();
                      return;
                  }
-                String url="http://3.17.63.250:3000/user/register/";
+                String url="http://18.221.112.221:3000/user/register/";
                 AsyncHttpClient client = new AsyncHttpClient();
                 RequestParams params = new RequestParams();
                 params.put("mobile",mobile);
@@ -84,7 +84,7 @@ public class register extends AppCompatActivity {
                         SharedPreferences pref = getApplicationContext().getSharedPreferences("Mypref",MODE_PRIVATE);
                         SharedPreferences.Editor edit = pref.edit();;
                         edit.putBoolean("LoggedIn",true);
-                        edit.putString("x-auth-token",headers[1].toString());
+                        edit.putString("x-auth-token",headers[1].getValue().toString());
                         edit.commit();
                         startActivity(i);
                     }

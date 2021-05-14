@@ -30,7 +30,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="₹ 500 "
+            android:id="@+id/walletbalancetext"
+
             android:textColor="@color/white"
             android:layout_below="@id/walletbalance"
             android:textSize="30sp"
@@ -128,7 +129,7 @@
         tools:ignore="VectorDrawableCompat" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/makepayment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/proceed"

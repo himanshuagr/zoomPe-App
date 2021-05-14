@@ -51,7 +51,7 @@ public class login_otp extends AppCompatActivity {
                 }
                 Intent i = getIntent();
                 String mobile = i.getStringExtra("mobile");
-                String url = "http://3.17.63.250:3000/user/loginVerifyOtp/";
+                String url = "http://18.221.112.221:3000/user/loginVerifyOtp/";
                 AsyncHttpClient client = new AsyncHttpClient();
                 RequestParams params = new RequestParams();
                 params.put("mobile",mobile);
@@ -66,7 +66,7 @@ public class login_otp extends AppCompatActivity {
                         SharedPreferences preferences = getApplicationContext().getSharedPreferences("Mypref",MODE_PRIVATE);
                         SharedPreferences.Editor edit = preferences.edit();
                         edit.putBoolean("LoggedIn",true);
-                        edit.putString("x-auth-token",headers[1].toString());
+                        edit.putString("x-auth-token",headers[1].getValue().toString());
                         edit.commit();
                         startActivity(i);
                     }

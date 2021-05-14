@@ -54,7 +54,7 @@ public class register_otp extends AppCompatActivity {
                     Toast.makeText(register_otp.this, "Enter Valid OTP", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                String url="http://3.17.63.250:3000/user/registerVerifyOtp/";
+                String url="http://18.221.112.221:3000/user/registerVerifyOtp/";
                 AsyncHttpClient client = new AsyncHttpClient();
                 RequestParams params = new RequestParams();
                 params.put("mobile",mobile);

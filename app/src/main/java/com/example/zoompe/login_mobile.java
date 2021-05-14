@@ -49,7 +49,7 @@ public class login_mobile extends AppCompatActivity {
                     Toast.makeText(login_mobile.this, "Enter the number", Toast.LENGTH_SHORT).show();
                 else
                 {
-                    String url="http://3.17.63.250:3000/user/loginByOtp/";
+                    String url="http://18.221.112.221:3000/user/loginByOtp/";
                     AsyncHttpClient client = new AsyncHttpClient();
                     RequestParams params = new RequestParams();
                     params.put("mobile",number.getText().toString());
