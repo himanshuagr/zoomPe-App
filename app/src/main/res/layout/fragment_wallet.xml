@@ -84,7 +84,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="40dp"
-        android:backgroundTint="@android:color/holo_blue_light"/>
+        android:backgroundTint="#BF4B6B6B"/>
 
     <ImageView
         android:id="@+id/imageView2"

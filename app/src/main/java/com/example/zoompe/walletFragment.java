@@ -66,6 +66,13 @@ public class walletFragment extends Fragment {
         if(preferences.getInt("Balance",-1)!=-1)
             balance.setText("₹ "+preferences.getInt("Balance",-1));
 
+        makepayment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(),nfc.class);
+                startActivity(i);
+            }
+        });
 
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override

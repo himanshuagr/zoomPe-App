@@ -1,17 +1,300 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#4B7C7C">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="83dp"
-       android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="169dp"
-        android:layout_marginLeft="169dp"
-        android:layout_marginTop="306dp"
-        android:text="Dashboard"
-        android:textSize="40sp"/>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/Rlayout1"
+       android:background="@drawable/layout2"
+       android:layout_marginTop="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginLeft="10dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:layout_marginLeft="20dp"
+         android:textSize="15sp"
+         android:text="NFC Card"
+         android:textColor="@color/black"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/Llayout1"
+         android:layout_marginTop="40dp">
+
+         <ImageView
+             android:id="@+id/registerCard"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_weight="1"
+             app:srcCompat="@drawable/ic_round_nfc_24"
+             tools:ignore="VectorDrawableCompat" />
+
+         <ImageView
+             android:id="@+id/myCard"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_weight="1"
+             app:srcCompat="@drawable/ic_baseline_credit_card_24"
+             tools:ignore="VectorDrawableCompat" />
+
+         <ImageView
+             android:id="@+id/changePin"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_weight="1"
+             app:srcCompat="@drawable/ic_baseline_vpn_key_24"
+             tools:ignore="VectorDrawableCompat" />
+
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+         android:layout_below="@id/Llayout1"
+         android:layout_marginTop="5dp"
+          android:layout_marginBottom="20dp">
+
+         <TextView
+
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:gravity="center_horizontal"
+             android:textColor="@color/black"
+             android:text="Register Card" />
+
+         <TextView
+
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:gravity="center_horizontal"
+             android:textColor="@color/black"
+             android:text="My Card   " />
+
+         <TextView
+
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:gravity="center_horizontal"
+             android:textColor="@color/black"
+             android:text="Change PIN" />
+      </LinearLayout>
+
+
+   </RelativeLayout>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/Rlayout2"
+       android:background="@drawable/layout2"
+      android:layout_below="@+id/Rlayout1"
+       android:layout_marginTop="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginLeft="10dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:layout_marginLeft="20dp"
+          android:textSize="15sp"
+          android:text="Payments"
+          android:textColor="@color/black"/>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/Llayout2"
+          android:layout_marginTop="40dp">
+
+         <ImageView
+             android:id="@+id/toUser"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_weight="1"
+             app:srcCompat="@drawable/user"
+             tools:ignore="VectorDrawableCompat" />
+
+         <ImageView
+             android:id="@+id/toQr"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_weight="1"
+             app:srcCompat="@drawable/qr"
+             tools:ignore="VectorDrawableCompat" />
+
+         <ImageView
+             android:id="@+id/toself"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_weight="1"
+             app:srcCompat="@drawable/payment"
+             tools:ignore="VectorDrawableCompat" />
+
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/Llayout2"
+          android:id="@+id/layout3"
+          android:layout_marginTop="5dp"
+          >
+
+         <TextView
+
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:gravity="center_horizontal"
+             android:textColor="@color/black"
+             android:text="   To User" />
+
+         <TextView
+
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:gravity="center_horizontal"
+             android:text="To Qr code"
+             android:textColor="@color/black" />
+
+         <TextView
+
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:gravity="center_horizontal"
+             android:textColor="@color/black"
+             android:text="To Self  " />
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/layout4"
+          android:layout_below="@id/layout3"
+          android:layout_marginTop="20dp">
+
+         <ImageView
+             android:id="@+id/tobank"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_weight="1"
+             app:srcCompat="@drawable/bank"
+             tools:ignore="VectorDrawableCompat" />
+
+         <ImageView
+             android:id="@+id/wallet2"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_weight="1"
+             app:srcCompat="@drawable/wallet"
+             tools:ignore="VectorDrawableCompat" />
+
+         <ImageView
+             android:id="@+id/history"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_weight="1"
+             app:srcCompat="@drawable/transaction"
+             tools:ignore="VectorDrawableCompat" />
+
+
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/layout4"
+
+          android:layout_marginTop="5dp"
+          android:layout_marginBottom="20dp"
+          >
+
+         <TextView
+
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:gravity="center_horizontal"
+             android:textColor="@color/black"
+             android:text="To Bank" />
+
+         <TextView
+
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:gravity="center_horizontal"
+             android:text="Wallet"
+             android:textColor="@color/black" />
+
+         <TextView
+
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:gravity="center_horizontal"
+             android:textColor="@color/black"
+             android:text="History" />
+      </LinearLayout>
+   </RelativeLayout>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/Rlayout3"
+      android:layout_below="@id/Rlayout2"
+      android:layout_marginTop="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginLeft="10dp"
+       android:background="@drawable/layout2">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+         android:textColor="#BF4B6B6B"
+         android:text="Your Wallet Balance :  ₹ 500"
+         android:textSize="20sp"
+         android:layout_marginTop="10dp"
+         android:layout_marginBottom="10dp"
+         android:layout_marginLeft="40dp"/>
+
+
+
+
+   </RelativeLayout>
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="200dp"
+      android:layout_below="@id/Rlayout3"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+       app:cardCornerRadius="10dp">
+
+      <ImageView
+          android:id="@+id/imageView21"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:srcCompat="@drawable/homepage"
+          android:scaleType="fitXY"/>
+   </androidx.cardview.widget.CardView>
+
 </RelativeLayout>

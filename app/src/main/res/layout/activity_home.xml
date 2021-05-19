@@ -17,14 +17,14 @@
         android:layout_alignParentBottom="true"/>
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mytoolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_light"
-        android:id="@+id/mytoolbar"
+        android:background="#BF4B6B6B"
+        app:logo="@drawable/ic_baseline_home_24_w"
         app:title="Dashboard"
         app:titleMarginStart="30dp"
         app:titleTextColor="@color/white"
-        app:logo="@drawable/ic_baseline_home_24_w"
 
         />
     <FrameLayout
