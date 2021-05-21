@@ -22,7 +22,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Zoompe"
         android:usesCleartextTraffic="true">
-        <activity android:name=".nfc"></activity>
+        <activity android:name=".recievenfcpin"></activity>
+        <activity android:name=".recievePayment" />
+        <activity android:name=".status" />
+        <activity android:name=".nfcpin" />
+        <activity android:name=".registernfc" />
+        <activity android:name=".nfc" />
         <activity android:name=".paymentPage" />
         <activity android:name=".home" />
         <activity android:name=".register" />

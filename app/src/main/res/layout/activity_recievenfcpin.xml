@@ -4,38 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".nfc">
+    tools:context=".recievenfcpin">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#2f4c6e"
         android:id="@+id/mytoolbar"
-        app:title="Tap and Pay"
+        app:title="Enter PIN"
         app:titleMarginStart="30dp"
         app:titleTextColor="@color/white"
         app:logo="@drawable/ic_baseline_arrow_back_24"
 
         />
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/nfc" />
-
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/pin2"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-       android:id="@+id/text5"
-        android:layout_marginTop="150dp"
-        android:background="#FFFFFF"
-        android:text="Pay ₹ 200"
-        android:textColor="#2f4c6e"
-        android:textSize="30sp" />
+        android:textAlignment="center"
+        android:layout_marginTop="164dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="PIN"
+        />
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:id="@+id/registerpin2"
+        android:background="@drawable/layout_round"
+        android:text="Pay"
+        android:textColor="@color/white"
+        android:layout_below="@+id/pin2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#2f4c6e"/>
 
 </RelativeLayout>

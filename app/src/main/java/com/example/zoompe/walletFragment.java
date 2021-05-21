@@ -22,6 +22,7 @@ import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -43,7 +44,10 @@ import cz.msebera.android.httpclient.message.BasicHttpResponse;
 
 public class walletFragment extends Fragment {
 
-    TextView makepayment;
+
+    androidx.appcompat.widget.Toolbar toolbar;
+    BottomNavigationView navigationView;
+    TextView makepayment,history;
     TextView balance;
     EditText addmoney;
     Button proceed;
@@ -57,20 +61,32 @@ public class walletFragment extends Fragment {
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
 
         View root= inflater.inflate(R.layout.fragment_wallet,container,false);
+        toolbar = getActivity().findViewById(R.id.mytoolbar);
+        toolbar.setTitle("Wallet");
+        navigationView = getActivity().findViewById(R.id.bottom_navigation);
+        navigationView.getMenu().findItem(R.id.wallet).setChecked(true);
+        toolbar.setLogo(R.drawable.ic_baseline_account_balance_wallet_24_w);
         preferences = getActivity().getApplicationContext().getSharedPreferences("Mypref", Context.MODE_PRIVATE);
         makepayment = root.findViewById(R.id.makepayment);
         balance    = root.findViewById(R.id.walletbalancetext);
         addmoney = root.findViewById(R.id.editTextNumberSigned);
+        history = root.findViewById(R.id.textView8);
         proceed = root.findViewById(R.id.proceed);
         getWalletBalance();
         if(preferences.getInt("Balance",-1)!=-1)
             balance.setText("₹ "+preferences.getInt("Balance",-1));
 
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new transactionFragment()).commit();
+            }
+        });
+
         makepayment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity(),nfc.class);
-                startActivity(i);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new qrcodeFragment()).commit();
             }
         });
 
@@ -82,8 +98,8 @@ public class walletFragment extends Fragment {
 
                 if(amount==0)
                 {
-                    Activity activity = new Activity();
-                    Toast.makeText(activity, "Amount should not be null", Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(getActivity(), "Amount should not be null", Toast.LENGTH_SHORT).show();
                     return;
                 }
                String token = getToken();
@@ -129,7 +145,17 @@ public class walletFragment extends Fragment {
         return root;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        getWalletBalance();
+    }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        getWalletBalance();
+    }
 
     public void  getWalletBalance()
     {
@@ -137,23 +163,21 @@ public class walletFragment extends Fragment {
         String url = "http://18.221.112.221:3000/user/getWalletBalance/";
         AsyncHttpClient httpClient = new AsyncHttpClient();
        httpClient.addHeader("x-auth-token",token);
-
-
-
-
           httpClient.get(url, new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 super.onSuccess(statusCode, headers, response);
+
                 SharedPreferences.Editor edit = preferences.edit();
-                int balance;
+                int b;
                 try {
-                   balance  = Integer.parseInt(response.getString("Balance"));
+                   b  = Integer.parseInt(response.getString("Balance"));
+                    balance.setText("₹ "+b);
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    balance=-1;
+                    b=-1;
                 }
-                edit.putInt("Balance",balance);
+                edit.putInt("Balance",b);
                 edit.commit();
 
 

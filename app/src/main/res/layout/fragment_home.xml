@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4B7C7C">
+    android:background="#e3f0ff">
 
 
    <RelativeLayout
@@ -195,7 +195,7 @@
              android:layout_width="40dp"
              android:layout_height="40dp"
              android:layout_weight="1"
-             app:srcCompat="@drawable/bank"
+             app:srcCompat="@drawable/ic_baseline_account_balance_24"
              tools:ignore="VectorDrawableCompat" />
 
          <ImageView
@@ -267,14 +267,13 @@
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-         android:textColor="#BF4B6B6B"
-         android:text="Your Wallet Balance :  ₹ 500"
-         android:textSize="20sp"
-         android:layout_marginTop="10dp"
-         android:layout_marginBottom="10dp"
-         android:layout_marginLeft="40dp"/>
-
-
+          android:id="@+id/walletbalance2"
+          android:layout_marginLeft="40dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
+          android:text="Your Wallet Balance :  ₹ 500"
+          android:textColor="#2f4c6e"
+          android:textSize="20sp" />
 
 
    </RelativeLayout>

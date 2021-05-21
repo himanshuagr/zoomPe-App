@@ -54,19 +54,16 @@ public class home extends AppCompatActivity {
                 {
                     case R.id.home:
                         fragment = new homeFragment();
-                        toolbar.setTitle("Dashboard");
-                        toolbar.setLogo(R.drawable.ic_baseline_home_24_w);
                         break;
                     case R.id.wallet:
                         fragment = new walletFragment();
-                        toolbar.setTitle("Wallet");
-                        toolbar.setLogo(R.drawable.ic_baseline_account_balance_wallet_24_w);
                         break;
                     case R.id.qr:
                          fragment = new qrcodeFragment();
-                         toolbar.setTitle("Scan and Pay");
-                         toolbar.setLogo(R.drawable.ic_baseline_arrow_back_24);
                          break;
+                    case R.id.history:
+                        fragment = new transactionFragment();
+                        break;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                 return true;

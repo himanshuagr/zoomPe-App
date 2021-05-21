@@ -14,13 +14,14 @@
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
         app:menu="@menu/menu_navigation"
+
         android:layout_alignParentBottom="true"/>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/mytoolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#BF4B6B6B"
+        android:background="#2f4c6e"
         app:logo="@drawable/ic_baseline_home_24_w"
         app:title="Dashboard"
         app:titleMarginStart="30dp"

@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".nfc">
+    tools:context=".registernfc">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#2f4c6e"
         android:id="@+id/mytoolbar"
-        app:title="Tap and Pay"
+        app:title="Register NFC Card"
         app:titleMarginStart="30dp"
         app:titleTextColor="@color/white"
         app:logo="@drawable/ic_baseline_arrow_back_24"
@@ -19,22 +19,18 @@
         />
 
     <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mytoolbar"
         app:srcCompat="@drawable/nfc" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-       android:id="@+id/text5"
         android:layout_marginTop="150dp"
         android:background="#FFFFFF"
-        android:text="Pay ₹ 200"
+        android:text="Tap Card on Phone"
         android:textColor="#2f4c6e"
         android:textSize="30sp" />
 

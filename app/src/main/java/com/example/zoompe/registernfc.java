@@ -6,31 +6,20 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
-import android.nfc.tech.MifareClassic;
-import android.nfc.tech.MifareUltralight;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.TextView;
 import android.widget.Toast;
 
-public class nfc extends AppCompatActivity {
+public class registernfc extends AppCompatActivity {
 
     NfcAdapter nfcAdapter;
     PendingIntent pendingIntent;
-    TextView textView;
-    int amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nfc);
+        setContentView(R.layout.activity_registernfc);
         getSupportActionBar().hide();
-        Intent i =getIntent();
-        amount = i.getIntExtra("amount",0);
-        textView = findViewById(R.id.text5);
-        textView.setText("Pay ₹ "+amount);
-
-
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
         if(nfcAdapter==null)
         {
@@ -43,7 +32,7 @@ public class nfc extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent i =new Intent(getApplicationContext(),recievePayment.class);
+        Intent i = new Intent(getApplicationContext(),home.class);
         startActivity(i);
     }
 
@@ -78,12 +67,9 @@ public class nfc extends AppCompatActivity {
             String s = detectTagData(tag);
             if(s!=null)
             {
-                Intent i =getIntent();
-                Intent intent1 = new Intent(getApplicationContext(),recievenfcpin.class);
-                intent1.putExtra("nfc",s);
-                intent1.putExtra("amount",amount);
-                startActivity(intent1);
-
+                Intent i = new Intent(getApplicationContext(),nfcpin.class);
+                i.putExtra("NFC",s);
+                startActivity(i);
             }
         }
     }
@@ -105,7 +91,4 @@ public class nfc extends AppCompatActivity {
         }
         return result;
     }
-
-
-
 }

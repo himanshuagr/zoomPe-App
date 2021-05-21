@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recievePayment"
+    android:background="#e3f0ff">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2f4c6e"
+        android:id="@+id/mytoolbar"
+        app:title="Recieve Money"
+        app:titleMarginStart="30dp"
+        app:titleTextColor="@color/white"
+        app:logo="@drawable/ic_baseline_arrow_back_24"
+
+        />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Rlayout1"
+        android:background="@drawable/layout2"
+        android:layout_below="@+id/mytoolbar"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Enter Amount"
+            android:textColor="#2f4c6e"
+            android:textSize="25sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/text2"
+            android:background="@drawable/edittext_round"
+            android:id="@+id/edittextamount"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:hint="Amount"
+            android:paddingLeft="20dp"
+            android:textSize="25sp"
+            android:inputType="number"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/edittextamount"
+            android:background="@drawable/edittext_round"
+            android:id="@+id/edittextcomment"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:hint="Add a message"
+            android:paddingLeft="20dp"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"/>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/makePayment2"
+        android:background="@drawable/layout_round"
+        android:text="Recieve"
+        android:textColor="@color/white"
+        android:layout_below="@+id/Rlayout1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#2f4c6e"/>
+
+</RelativeLayout>

@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import com.budiyev.android.codescanner.CodeScanner;
 import com.budiyev.android.codescanner.CodeScannerView;
 import com.budiyev.android.codescanner.DecodeCallback;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.zxing.Result;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
@@ -27,6 +28,9 @@ import org.jetbrains.annotations.NotNull;
 
 public class qrcodeFragment extends Fragment {
 
+
+    androidx.appcompat.widget.Toolbar toolbar;
+    BottomNavigationView navigationView;
     private  CodeScanner codeScanner;
     private TextView textView;
     @Nullable
@@ -35,6 +39,11 @@ public class qrcodeFragment extends Fragment {
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_qrcode,container,false);
+        toolbar = getActivity().findViewById(R.id.mytoolbar);
+        toolbar.setTitle("Scan and Pay");
+        toolbar.setLogo(R.drawable.ic_baseline_arrow_back_24);
+        navigationView = getActivity().findViewById(R.id.bottom_navigation);
+        navigationView.getMenu().findItem(R.id.qr).setChecked(true);
         CodeScannerView scannerView =root.findViewById(R.id.scanner_view);
         textView = root.findViewById(R.id.myqrcode);
         codeScanner = new CodeScanner(getActivity(),scannerView);

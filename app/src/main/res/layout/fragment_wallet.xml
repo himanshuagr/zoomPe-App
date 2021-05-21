@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#f5f8fc">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -46,7 +47,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/addmoney"
         android:text="Add Money"
-        android:textColor="@color/black"
+        android:textColor="#23354a"
         android:layout_below="@+id/mylayout"
         android:textSize="25sp"
         android:layout_marginTop="20dp"
@@ -84,7 +85,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="40dp"
-        android:backgroundTint="#BF4B6B6B"/>
+        android:backgroundTint="#2f4c6e"/>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -114,7 +115,7 @@
         android:textSize="25sp"
         android:layout_below="@id/proceed"
         android:layout_marginTop="30dp"
-        android:textColor="@color/black"
+        android:textColor="#2f4c6e"
         android:layout_marginLeft="30dp"
         android:text="Use Your Wallet to" />
 
@@ -136,7 +137,9 @@
         android:layout_marginTop="80dp"
         android:layout_marginLeft="80dp"
         android:textSize="18sp"
-        android:text="Make a Payment" />
+        android:text="Make a Payment"
+        android:textColor="#2f4c6e"
+        />
 
     <TextView
         android:id="@+id/textView7"
@@ -146,6 +149,7 @@
         android:layout_marginTop="120dp"
         android:layout_marginLeft="80dp"
         android:textSize="18sp"
+        android:textColor="#2f4c6e"
         android:text="Withdraw Money to Bank Account" />
 
     <TextView
@@ -156,6 +160,7 @@
         android:layout_marginTop="160dp"
         android:layout_marginLeft="80dp"
         android:textSize="18sp"
+        android:textColor="#2f4c6e"
         android:text="Transaction History" />
 
 

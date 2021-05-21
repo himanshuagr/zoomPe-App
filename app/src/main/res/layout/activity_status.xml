@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".status">
+
+    <ImageView
+        android:id="@+id/backbutton8"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/backb" />
+
+    <ImageView
+        android:id="@+id/statuslogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+
+        app:srcCompat="@drawable/check_mark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/statusmsg"
+        android:textSize="25sp"
+        android:text="NFC Card Added successfully"
+        android:textColor="#2f4c6e"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/statuslogo"
+        android:layout_marginTop="20dp"/>
+
+
+
+
+</RelativeLayout>
