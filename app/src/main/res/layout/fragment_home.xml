@@ -43,6 +43,7 @@
              android:id="@+id/myCard"
              android:layout_width="40dp"
              android:layout_height="40dp"
+
              android:layout_weight="1"
              app:srcCompat="@drawable/ic_baseline_credit_card_24"
              tools:ignore="VectorDrawableCompat" />

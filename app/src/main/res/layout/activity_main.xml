@@ -5,16 +5,8 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="260dp"
-        android:layout_height="260dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-
-        app:srcCompat="@drawable/logo2" />
+    tools:context=".MainActivity"
+    android:background="#ebdccf">
 
     <Button
         android:id="@+id/button2"
@@ -25,7 +17,7 @@
         android:layout_marginBottom="98dp"
         android:text="Login"
         android:textSize="16sp"
-        app:backgroundTint="#0E67B4" />
+        app:backgroundTint="#2e5b4d" />
 
     <TextView
         android:id="@+id/register"
@@ -35,8 +27,17 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="-30dp"
         android:text="Not Registered ! Click here"
-        android:textColor="#0E67B4"
+        android:textColor="#2e5b4d"
         android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+
+        app:srcCompat="@drawable/icon" />
 
 
 </RelativeLayout>

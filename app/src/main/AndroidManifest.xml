@@ -17,12 +17,16 @@
     <application
         android:allowBackup="true"
         android:fullBackupContent="false"
-        android:icon="@drawable/logo2"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zoompe"
         android:usesCleartextTraffic="true">
-        <activity android:name=".recievenfcpin"></activity>
+        <activity android:name=".myCard"></activity>
+        <activity android:name=".profile" />
+        <activity android:name=".transferToBank" />
+        <activity android:name=".sendtouser" />
+        <activity android:name=".recievenfcpin" />
         <activity android:name=".recievePayment" />
         <activity android:name=".status" />
         <activity android:name=".nfcpin" />

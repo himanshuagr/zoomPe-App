@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".transferToBank"
+    android:background="#e3f0ff">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2f4c6e"
+        android:id="@+id/mytoolbar"
+        app:title="Withdraw Money"
+        app:titleMarginStart="30dp"
+        app:titleTextColor="@color/white"
+        app:logo="@drawable/ic_baseline_arrow_back_24"
+
+        />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Rlayout1"
+        android:background="@drawable/layout2"
+        android:layout_below="@+id/mytoolbar"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Enter Amount"
+            android:textColor="#2f4c6e"
+            android:textSize="25sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/text2"
+            android:background="@drawable/edittext_round"
+            android:id="@+id/accountname"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:hint="Accountholder name"
+            android:paddingLeft="20dp"
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/accountname"
+            android:background="@drawable/edittext_round"
+            android:id="@+id/accountnumber"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:hint="Account number"
+            android:paddingLeft="20dp"
+            android:textSize="20sp"
+            android:inputType="number"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/accountnumber"
+            android:background="@drawable/edittext_round"
+            android:id="@+id/ifsccode"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:hint="IFSC Code"
+            android:paddingLeft="20dp"
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/ifsccode"
+            android:background="@drawable/edittext_round"
+            android:id="@+id/amount2"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:hint="Amount"
+            android:paddingLeft="20dp"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"
+            android:inputType="number"/>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/sendMoney2"
+        android:background="@drawable/layout_round"
+        android:text="Send"
+        android:textColor="@color/white"
+        android:layout_below="@+id/Rlayout1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#2f4c6e"/>
+
+</RelativeLayout>

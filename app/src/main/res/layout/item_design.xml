@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/bank"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/type"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="12dp"
+            android:text="Paid to"
+            android:textColor="#2f4c6e"
+            android:textSize="20sp"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ref"
+            android:layout_below="@+id/type"
+            android:layout_marginStart="90dp"
+            android:text="9875123132"
+
+            android:textSize="15sp"/>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/amount"
+           android:layout_alignParentEnd="true"
+           android:layout_marginRight="10dp"
+           android:layout_marginTop="20dp"
+           android:text="+ ₹500"
+           android:textSize="18sp"
+           android:textColor="#2f4c6e"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date"
+            android:layout_alignParentBottom="true"
+            android:text="19 Aug 2020"
+            android:textSize="15sp"
+            android:textColor="#2f4c6e"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/transactionId"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:text="TN12345678"
+            android:textSize="15sp"
+            android:textColor="#2f4c6e"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -38,6 +38,7 @@ public class homeFragment extends Fragment {
     ImageView wallet;
     ImageView history;
     TextView balance;
+    ImageView mycard;
     SharedPreferences preferences;
 
 
@@ -52,7 +53,9 @@ public class homeFragment extends Fragment {
         toolbar.setTitle("Dashboard");
         toolbar.setLogo(R.drawable.ic_baseline_home_24_w);
          registerNFC = root.findViewById(R.id.registerCard);
+         mycard = root.findViewById(R.id.myCard);
          toself = root.findViewById(R.id.toself);
+         toBank = root.findViewById(R.id.tobank);
          toUser = root.findViewById(R.id.toUser);
          toQr = root.findViewById(R.id.toQr);
          wallet = root.findViewById(R.id.wallet2);
@@ -67,6 +70,9 @@ public class homeFragment extends Fragment {
          setToQr();
          setHistory();
          setToself();
+         setToUser();
+         setToBank();
+         setMycard();
 
          return  root;
 
@@ -83,6 +89,41 @@ public class homeFragment extends Fragment {
         super.onPause();
         getWalletBalance();
     }
+
+
+    public  void setMycard()
+    {
+        mycard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(),myCard.class);
+                startActivity(i);
+            }
+        });
+    }
+
+    public  void setToBank()
+    {
+        toBank.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(),transferToBank.class);
+                startActivity(i);
+            }
+        });
+
+    }
+    public  void setToUser()
+    {
+        toUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(),sendtouser.class);
+                startActivity(i);
+            }
+        });
+    }
+
     public void setToself()
     {
 

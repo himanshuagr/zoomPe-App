@@ -192,10 +192,6 @@ public class walletFragment extends Fragment {
 
         });
 
-
-
-
-
     }
 
 
